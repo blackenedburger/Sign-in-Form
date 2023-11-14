@@ -1,85 +1,62 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0;;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #141414;
-}
-
-#container{
-    display:flex;
-    width: 100%;
-
-    height: 100vp;
-    align-content: end;
-}
-
-#container .imgBox{
     display: flex;
-    height: 100vp;
-    width: 50%;
-    border: 2px solid red;
-    justify-content: end;
-    margin-left: 15%;
-}
-
-#container .imgBox img{
-    
-
-
-    height:100%
-}
-
-img{
-    display: flex;
-    width: 100%;
-    margin-left: 30%;
-    border: blueviolet 2px solid;
-
-}
-/*#container .imgBox{
-    display: flex;
-    height: 100vp;
-    width: 50%;
-    border: 2px solid red;
-    justify-content: end;
-}
-
-#container .imgBox img{
-    
-
-    max-width: 600px;;
-    height:100%
-}
-
-img{
-    display: flex;
-    width: 70%;
-    margin-left: 30%;
-    border: blueviolet 2px solid;
-    height: 100%;
-}*/
-#container .content{
-    display: flex;
+    background-color: #262626;
+    border: 2px red solid;
     height: 100vh;
-    width: 50%;
-    border: 2px solid pink;
-    background-color: #fafafa;
-    margin-right: 15%;
+    justify-content: center;
+    position: relative;
+    
+}
+.container{
+    position: relative;
+    border: green 2px solid;
+    width:1100px;
+    min-width: 1100px;
+    height: 100%;
+    resize: none;
+}
+.imageBox{
+    position: absolute;
+    margin-left: 0;
+
+    left: 0;
+    right: 0;
+    text-align: center;
+    /*
+    width: 551px;
+    min-width: 525px;
+    */
+    height: 100%;
+}
+
+img{
+    position: absolute;
+    left: 0;
+    width: 450px;
+    height: 100%;
+}
+
+.formBox{
+    position: absolute;
+    right: 0;
+    width: 650px;
+    height: 100%;
+    border: yellow 2px solid;
+    background-color: aliceblue;
+    resize: none;
+}
+form{
 
 }
 
 fieldset{
-    width: 100%;
-}
-
-#container .content form{
-    /*display: flex */
-    width: 100%;
-    height: 100%;
-    border: yellow 2px solid;
+    
 }
 
 
@@ -116,48 +93,12 @@ button{
 }
 
 
-@media screen and (max-width: 993px) {
-    body {
-      background-color: rgb(245, 245, 249);
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .formBox {
+      background-color: rgb(33, 33, 73);
     }
-    #container{
-        position: relative;
-    }
-
-    #container .imgBox{
-
-        position: absolute;
-        top: 0;
-        width: 50%;
-        
-        border: 2px solid red;
-        margin-left: 0%;
-    }
-
-    img{
-        display: flex;
-        width: 100%;
-
-
-    }
-
-    #container .content{
-        display: flex;
-        position: absolute;
-        left: 50%;
-        height: 100vh;
-        width: 50%;
-
-
-    
-    }
-
-    #container .content form{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        border: yellow 2px solid;
-    
-    }
-
-  }
+}
