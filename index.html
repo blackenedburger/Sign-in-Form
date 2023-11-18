@@ -4,87 +4,83 @@
     <meta charset="UTF-8" />
     <title>Table Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style5.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
     <body>
         <div class="container">
-            <div class="imageBox">
-                <img src="pic1.jpg" >
-            </div>
+            <img src="pic1.jpg">
             <div class="formBox">
-                <form>
-                    <fieldset>
-                        <legend>Login Form</legend>
-                        
-                        <p>Details</p>
-                        
-                        <div class="rows1">
-                            <div class="cols1">  
-                                <div class="cols2">
-                                    <label for="firstName">First name: </label>
+                <div class="formTop"></div>
+                <div class="formMiddle">
+                    <form>
+                        <fieldset>
+                            <legend>Signup Form</legend>
+                            <div class="rows1">
+                                <div class="cols1">  
+                                    <div class="cols2">
+                                        <label for="firstName"><span>First Name: </span></label>
+                                    </div>
+                                    <div class="cols2">
+                                        <input id="firstName" name="firstName" type="text" />
+                                    </div>
+                                    <span></span>
                                 </div>
-                                <div class="cols2">
-                                    <input id="firstName" name="firstName" type="text" />
+                                <div class="cols1">
+                                    <div class="cols2">
+                                        <label for="lastName"><span>Last Name: </span></label>
+                                    </div>
+                                    <div class="cols2"1>
+                                        <input id="lastName" name="lastName" type="text" />
+                                    </div>
                                 </div>
-                                <span></span>
                             </div>
-                            <div class="cols1">
-                                <div class="cols2">
-                                    <label for="lastName">Last name: </label>
+                            <div class="rows1">
+                                <div class="cols1">
+                                    <div class="cols2">
+                                        <label for="email"><span>Email: </span></label>
+                                    </div>
+                                    <div class="cols2">
+                                        <input id="email" name="email" type="email" />
+                                    </div>
+                                    <span></span>
                                 </div>
-                                <div class="cols2">
-                                    <input id="lastName" name="lastName" type="text" />
+                                <div class="cols1">
+                                    <div class="cols2">
+                                        <label for="phoneNumber"><span>Phone Number: </span></label>
+                                    </div>
+                                    <div class="cols2">
+                                        <input id="phoneNumber" name="phoneNumber" type="number" />
+                                    </div>
+                                    <span></span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rows1">
-                            <div class="cols1">
-                                <div class="cols2">
-                                    <label for="email">email: </label>
+                            <div class="rows1">
+                                <div class="cols1">
+                                    <div class="cols2">
+                                        <label for="email"><span>Password: </span></label>
+                                    </div>
+                                    <div class="cols2">
+                                        <input id="password" name="password" type="password" required/>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="cols2">
-                                    <input id="email" name="email" type="email" />
+                                <div class="cols1">
+                                    <div class="cols2">
+                                        <label for="password2"><span>Repeat Password: </span></label>
+                                    </div>
+                                    <div class="cols2">
+                                        <input id="password2" name="password2" type="password" required/>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <span></span>
-                            </div>
-                            <div class="cols1">
-                                <div class="cols2">
-                                    <label for="phoneNumber">Phone Number: </label>
-                                </div>
-                                <div class="cols2">
-                                    <input id="phoneNumber" name="phoneNumber" type="tel" />
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="rows1">
-                            <div class="cols1">
-                                <div class="cols2">
-                                    <label for="email">Password: </label>
-                                </div>
-                                <div class="cols2">
-                                    <input id="password" name="password" type="password" required/>
-                                </div>
-                                <span></span>
-                            </div>
-                            <div class="cols1">
-                                <div class="cols2">
-                                    <label for="password2">Repeat Password: </label>
-                                </div>
-                                <div class="cols2">
-                                    <input id="password2" name="password2" type="password" />
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                    
-        
-                        
-                    </fieldset>
-                    <div><button>Create Account</button></div>
-                </form>
+                            </div>  
+                        </fieldset>
+                        <div><button>Create Account</button></div>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
+    <script src="script.js"></script>
 </html>
