@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <title>Table Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="./style7.css">
+    <script defer src="script.js"></script>
 </head>
     <body>
         <div class="container">
-            <img src="pic1.jpg">
+            <img src="pic1.jpg" alt="image by David Selbert">
             <div class="formBox">
                 <div class="formTop"></div>
                 <div class="formMiddle">
@@ -30,8 +30,8 @@
                                     <div class="cols2">
                                         <label for="lastName"><span>Last Name: </span></label>
                                     </div>
-                                    <div class="cols2"1>
-                                        <input id="lastName" name="lastName" type="text" />
+                                    <div class="cols2">
+                                        <input id="lastName" name="lastName" type="text" value="b"/>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                                         <label for="email"><span>Email: </span></label>
                                     </div>
                                     <div class="cols2">
-                                        <input id="email" name="email" type="email" />
+                                        <input id="email" name="email" type="email" value="a@b.bob"/>
                                     </div>
                                     <span></span>
                                 </div>
@@ -50,18 +50,19 @@
                                         <label for="phoneNumber"><span>Phone Number: </span></label>
                                     </div>
                                     <div class="cols2">
-                                        <input id="phoneNumber" name="phoneNumber" type="number" />
+                                        <input id="phoneNumber" name="phoneNumber" type="number" value="987987"/>
                                     </div>
                                     <span></span>
                                 </div>
                             </div>
+                            <!--
                             <div class="rows1">
                                 <div class="cols1">
                                     <div class="cols2">
                                         <label for="email"><span>Password: </span></label>
                                     </div>
                                     <div class="cols2">
-                                        <input id="password" name="password" type="password" required/>
+                                        <input id="password" name="password" type="password" />
                                         <span></span>
                                     </div>
                                 </div>
@@ -70,17 +71,20 @@
                                         <label for="password2"><span>Repeat Password: </span></label>
                                     </div>
                                     <div class="cols2">
-                                        <input id="password2" name="password2" type="password" required/>
+                                        <input id="password2" name="password2" type="password" />
                                         <span></span>
                                     </div>
                                 </div>
+                            -->
                             </div>  
                         </fieldset>
-                        <div><button>Create Account</button></div>
+                        <!--<div><button type="button">Create Account</button></div>-->
+                        <div><input type="button" value="Create Account" id="buttonInput"></div>
+                        <div id="results"></div>
                     </form>
                 </div>
             </div>
         </div>
     </body>
-    <script src="script.js"></script>
+
 </html>
