@@ -7,48 +7,86 @@
 body{
     display: flex;
     background-color: #262626;
-    border: 4px red solid;
     height: 100vh;
     justify-content: center;
+    
 }
 .container{
     display: flex;
-
-    border: green 4px solid;
+    position: relative;
     min-width: 1100px;
-    height: 100%;
-    overflow: none;
-
+    height: 100vh;
 }
+
 .imageBox{
-    position: absolute;
+    position: relative;
     display: flex;
     left: 0;
     height: 100vh;
     max-width: 450px;
+    width: 100%;
 }
 
 img{
-    border: brown 4px solid;
     width: 450px;
 }
-/*  
-    1100 X 600
-    1100 X 300
-    .banner{}  
-    position: relative;
-    width:100%;
-    height: 100vh;
-    background: url(birds.jpg);
-    background-size: cover;
-    background-attachment: fixed;*/
 
+#banner{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    height:100px;
+    width: 100%;;
+    left: 0;
+    top: 17%;
+    z-index: 1;
+    background-color: rgba(65, 59, 62, 0.8);
+}
+
+.logo{
+    position: absolute;
+    height:100px;
+    width: 150px;;
+    left: 25%;
+    
+    top: 0;
+    z-index: 1;
+}
+
+#word{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47%;
+    height: 100%;
+    font-family: 'Norse', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    color: rgb(38, 37, 37);
+    left: 53%;
+}
+
+/*
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 25%;
+    z-index: 1;
+    background-color: #900;
+}
+*/
 .formBox{
     display: flex;;
     flex-direction: column;
     background-color: aliceblue;
-    border: blueviolet 4px solid;
+
     width: 100%;
+    max-width: 750px;
+    overflow: none;
+
 }
 
 .formTop{
@@ -56,8 +94,20 @@ img{
     width: 100%;
 }
 
+.formMiddle{
+    display: flex;
+    /*border: black 2px solid;*/
+    background-color: rgb(236, 235, 233);
+
+}
+
 fieldset{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: none;
     padding: 5px 0 1rem 0;
+    overflow: none;
 }
 
 .rows1{          
@@ -145,54 +195,71 @@ input:invalid + span::before{
     left: 228px;
 }
 
-@media screen and (max-width: 1100px) {
-    body{
-        width: 100vw;
-    }
+input:valid {
+    border: 2px solid green;
+  }
+
+input:valid + span::before {
+    position: absolute;
+    content: '✓';
+    color: green;
+    top: -40px;
+    left: 228px;
+  }
+
+    /* This is the style of our error messages */
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+  
+.error.active {
+    padding: 0.3em;
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 321px) and (max-width: 768px){
+
     .container{
         display: flex;
         position: fixed;
         vertical-align: middle;
         border: green 4px solid;
-        max-width: 1100px;
-        max-height: 600px;
-        min-height: 265px;;
-
-        /*height: 265px;;*/
+        max-width: 768px;
+        height: 100%;
+        min-height: 333px;;
         width: 100vw;
-        
-        
+        /*height: 265px;;*/
+ 
     }
-    
     img{
-
+        min-width: 360px;;
+    }
+    .imageBox{
+        position: fixed;
+        display: flex;
+        left: 0;
+        height: 100vh;
+        min-height: 100%;
+        max-width: 450px;
     }
     .formBox {
+        display: flex;
+ 
         background-color: rgb(33, 33, 73);
         margin-left: 0;
-
-      }
-        /*
-
-        .body{
-            display: flex;
-            background-color: #262626;
-            border: 4px red solid;
-            height: 100vh;
-            justify-content: center;
-        }
-
-        .container{
-            display: flex;
-            border: green 4px solid;
-            min-width: 1100px;
-            height: 100%;
-            overflow: none;
-        }
-    */
-
-
+        width: 100%;
+        max-width: 730px;
+    }
 }
 
+/* Media Query for cell phones */
+@media (min-width: 768px){
 
+}
 
