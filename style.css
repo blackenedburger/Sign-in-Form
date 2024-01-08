@@ -16,6 +16,7 @@ body{
     position: relative;
     min-width: 1100px;
     height: 100vh;
+    max-height: fit-content;
 }
 
 .imageBox{
@@ -67,22 +68,11 @@ img{
     left: 53%;
 }
 
-/*
-.banner{
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    left: 0;
-    top: 25%;
-    z-index: 1;
-    background-color: #900;
-}
-*/
+
 .formBox{
     display: flex;;
     flex-direction: column;
     background-color: aliceblue;
-
     width: 100%;
     max-width: 750px;
     overflow: none;
@@ -97,7 +87,7 @@ img{
 .formMiddle{
     display: flex;
     /*border: black 2px solid;*/
-    background-color: rgb(236, 235, 233);
+    
 
 }
 
@@ -105,9 +95,11 @@ fieldset{
     display: flex;
     flex-direction: column;
     height: auto;
+    width: 144%;
     border: none;
     padding: 5px 0 1rem 0;
     overflow: none;
+    background-color: rgb(236, 235, 233);
 }
 
 .rows1{          
@@ -207,11 +199,11 @@ input:valid + span::before {
     left: 228px;
   }
 
-    /* This is the style of our error messages */
+/* This is the style of our error messages */
 .error {
     width: 100%;
     padding: 0;
-    font-size: 80%;
+    font-size: 100%;
     color: white;
     background-color: #900;
     border-radius: 0 0 5px 5px;
@@ -224,42 +216,107 @@ input:valid + span::before {
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 321px) and (max-width: 768px){
-
+    body{
+        display: flex;
+        background-color: #262626;
+        height: 100vh;
+        justify-content: center;     
+    }
     .container{
         display: flex;
+        flex-direction: column-reverse;/*changed*/
+        vertical-align: end;
         position: fixed;
-        vertical-align: middle;
-        border: green 4px solid;
         max-width: 768px;
         height: 100%;
         min-height: 333px;;
         width: 100vw;
-        /*height: 265px;;*/
- 
     }
     img{
         min-width: 360px;;
+        height: 50%;  /*changed*/
+        width: 100%;
+    }
+
+    #banner{
+        top: 6%;
+        background-color: rgba(65, 59, 62, 0.8);
+    }
+
+    .logo{
+        left: 6%;
     }
     .imageBox{
+        z-index: 0;
         position: fixed;
-        display: flex;
-        left: 0;
-        height: 100vh;
-        min-height: 100%;
-        max-width: 450px;
+        max-width: 600px;
     }
     .formBox {
-        display: flex;
- 
-        background-color: rgb(33, 33, 73);
-        margin-left: 0;
-        width: 100%;
-        max-width: 730px;
+        z-index: 2;
+        flex-direction: row; /*changed*/
+        background-color: aliceblue;
+        margin-left: 240px;
+        width: 100%; /*changed*/
+        height: 50%;/*changed*/
+        max-width: 647px;
     }
+
+    .formTop{
+        height: 0;
+        width: 0;
+    }
+
+    fieldset{
+        align-items: center;
+        width: 155%;
+
+    }
+
+    input{
+        width: 150px;
+    }
+    input, 
+    button{
+        height: 60px;
+        font-size: 20px;
+    }
+
+    #buttonInput{
+        margin-left: 150px;;
+    }
+
+    legend{
+        margin-left: 156px;
+    }
+
+    input:required + span::after {
+        content: "required";
+        border-radius: 15%;
+        font-size: 16px;;
+        left: 138px;
+        top: -75px;
+    }
+
+    input:invalid + span::before{
+        position: absolute;
+        content: "X";
+        color: red;
+        top: -40px;
+        left: 33px;
+    }
+
+    input:valid + span::before {
+        position: absolute;
+        content: '✓';
+        color: green;
+        top: -40px;
+        left: 33px;
+      }
+
 }
 
 /* Media Query for cell phones */
 @media (min-width: 768px){
-
+    
 }
 
